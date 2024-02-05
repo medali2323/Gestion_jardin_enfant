@@ -1,0 +1,50 @@
+
+<div class="wrapper">
+    <app-sidebarm></app-sidebarm>
+  
+  
+      <div class="main-panel">
+  
+  
+          
+      <app-navebarm></app-navebarm>
+
+      <div class="content">
+              
+  
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                        </div>
+                    
+
+              
+<br> 
+إسم الحساب {{username}}
+<br>
+<h4>تحيين كلمة السر 
+</h4>
+<input type="password" placeholder="كلمة السر الحالية " [(ngModel)]="r.old_password"  [ngModelOptions]="{standalone:true}" >
+<input type="password" placeholder="كلمة السر الجديدة "[(ngModel)]="r.new_password"  [ngModelOptions]="{standalone:true}"  >
+<input type="submit" value="تحيين" (click)="modifierpass()"> 
+<small class="text-danger">{{s}}</small>
+<small class="text-success">{{rus}}</small>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+   
+
+
+
+    <app-footerm></app-footerm>
+m
+
+</div>
+</div>
+

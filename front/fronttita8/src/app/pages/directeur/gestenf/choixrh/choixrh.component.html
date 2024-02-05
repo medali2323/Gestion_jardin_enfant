@@ -1,0 +1,32 @@
+
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+      <div class="main-panel">   
+      <app-navbar></app-navbar>
+          <div class="content">
+                  <div class="container-fluid">
+                    <div class="form-group">
+                        <h3 >إختيار التعريفة الشهرية  للطفل   </h3>
+
+                        الإسم و اللقب {{enfant.nom}} {{enfant.prenom}}<br>
+
+                        التعريفة         <select   required #rg="ngModel" [class.is-invalid]="rg.touched && rg.invalid "  [(ngModel)]="classeText"  >
+                            <option *ngFor="let element of regimehoraires"   [value]="element.id" >
+                                {{element.nom}}
+                            </option>
+                        </select>  
+                        <small *ngIf="rg.invalid" class="text-danger">*هذا المجال مطلوب*<br></small>
+  
+                    </div>
+
+               <br>
+               <br>
+               <br>
+               <br>
+<input type="submit" (click)="affecter()" value="تسجيل" [disabled]=" rg.invalid"  >
+</div>
+                  </div>
+          <app-footer></app-footer>
+      </div>
+  </div>
+  

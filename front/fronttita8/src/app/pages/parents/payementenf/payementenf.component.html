@@ -1,0 +1,87 @@
+
+<div class="wrapper">
+  <app-sidebarp></app-sidebarp>
+
+
+    <div class="main-panel">
+
+
+        
+    <app-navbarp></app-navbarp>
+
+    <div class="content">
+          
+
+      <div class="container-fluid">
+          <div class="row">
+            <h1 class="liste"> قائمة   الإستخلاصات الشهرية</h1>
+
+            <table class="fl-table">  
+                          <thead>
+               <tr>
+                <th>الشهر</th>
+                <th>خالص</th>
+
+                <th>تاريخ الدفع</th>
+                <th> المبلغ</th>
+
+               </tr>
+
+
+             </thead>
+             <tr *ngFor="let item of tab"> 
+               <!--  
+
+               --> <td > معلوم {{item.mois.m}}</td>   
+
+                <td *ngIf="item.payer==true" style="color: green;">خالص
+                </td>
+                <td style="color: red;" *ngIf="item.payer==false" >ليس خالص*
+
+                </td>
+                <td >{{item.datereglemaiment}}</td>
+                <td >{{item.montantreglemaiment}}</td>
+
+             </tr>
+           </table> 
+           <h1 class="liste"> قائمة   الإستخلاصات  الأنشطة الإضافية  </h1>
+
+           <table class="fl-table">  
+                         <thead>
+              <tr>
+               <th>الشهر</th>
+               <th>خالص</th>
+               <th>تاريخ الدفع</th>
+               <th> المبلغ</th>
+
+              </tr>
+
+
+            </thead>
+            <tr *ngFor="let item of tabb"> 
+               <td  > معلوم {{item.mois}}</td>
+              
+               <td style="color: red;" *ngIf="item.payer==false" >ليس خالص*
+
+               </td>
+               <td *ngIf="item.payer==true" style="color: green;">خالص
+               
+              </td>
+               <td >{{item.datereglemaiment}}</td>
+               <td >{{item.montantreglemaiment}}</td>
+
+            </tr>
+          </table> 
+          </div>
+      </div>
+    </div>
+ 
+
+
+
+  <app-footerp></app-footerp>
+
+
+</div>
+</div>
+

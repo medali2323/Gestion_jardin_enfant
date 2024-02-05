@@ -1,0 +1,101 @@
+<div class="wrapper">
+    <app-sidebarm></app-sidebarm>
+
+
+    <div class="main-panel">
+
+
+
+        <app-navebarm></app-navebarm>
+
+        <div class="content">
+
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                            </div>
+                            <input type="submit" value="طباعة قائمة الأطفال" (click)="printclasse()">
+
+                            <h1 style="text-align: center; color: red;" *ngIf="tab1.length==0"> لا يوجد أطفال في هذا
+                                القسم</h1>
+
+                            <h1 style="text-align: center;" *ngIf="tab1.length > 0">قائمة الأطفال</h1>
+
+                            <form [formGroup]="registrationForm" (ngSubmit)="fairepresance()">
+
+                                <table id="example" class="table table-striped table-bordered dt-responsive nowrap"
+                                    style="width:100%" *ngIf="tab1.length > 0">
+                                    <thead>
+                                        <tr>
+                                            <th>الإسم </th>
+                                            <th>اللقب</th>
+                                            <th> <small class="text-danger" *ngIf="t">{{s}}</small>
+                                                تسجيل الحضور ليوم <input type="date" [(ngModel)]="databs"
+                                                    [ngModelOptions]="{standalone:true}" (change)="loadabs()" />
+                                                <button type="button" (click)="printabs()" [disabled]="t">طباعة</button>
+                                                <mat-icon>print</mat-icon>
+
+                                            </th>
+
+
+
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                        <tr *ngFor="let dataItem of tab1">
+
+                                            <td>{{dataItem.prenom}}</td>
+                                            <td>{{dataItem.nom}}</td>
+                                            <td>
+
+                                                <div>
+                                                    <input type="radio" value="p" [name]="dataItem.id"
+                                                        class="dataItem.abs" [checked]="dataItem.abs=='p'"
+                                                        (click)="dataItem.abs='p';dataItem.cause='' " [disabled]="t">
+                                                    <label for="">حاضر</label>
+
+                                                </div>
+
+                                                <div>
+                                                    <input type="radio" value="a" [name]="dataItem.id" class="abs"
+                                                        [checked]="dataItem.abs=='a'" (click)="dataItem.abs='a'"
+                                                        [disabled]="t">
+                                                    <label for="">غائب</label>
+                                                </div>
+                                                <input type="text" [(ngModel)]="dataItem.cause"
+                                                    [ngModelOptions]="{standalone:true}"
+                                                    placeholder="سبب الغياب او ملاحضة"
+                                                    [disabled]="t||dataItem.abs=='p'" />
+
+
+                                            </td>
+
+
+                                        </tr>
+
+                                    </tbody>
+
+                                </table>
+
+                                <input type="submit" value="تسجيل الحضور" [disabled]="t" *ngIf="tab1.length > 0">
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <app-footer></app-footer>
+
+
+    </div>
+</div>

@@ -1,0 +1,163 @@
+
+<div class="wrapper">
+  <app-sidebar></app-sidebar>
+    <div class="main-panel">   
+    <app-navbar></app-navbar>
+        <div class="content">
+                <div class="container-fluid">
+                  <div class="row">
+                      <form [formGroup]="modifierenfant" 
+                                    (ngSubmit)="modif()">
+                                    <h1 style="text-align: center;">تحيين طفل</h1>
+                  <div class="form-row">
+                      <div class="form-group col">
+                                <input type="text" placeholder="إسم الطفل"  formControlName="prenom">
+                                 
+                               
+                              <div *ngIf="prenom.touched && prenom.invalid">
+                                <small *ngIf="prenom.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                                </div>
+                           </div>
+                              </div>
+                       <div class="form-row">
+                        <div class="form-group col">
+                        <input type="text"  placeholder="لقب الطفل"  formControlName="nom">
+                         
+                       
+                      <div *ngIf="nom.touched && nom.invalid">
+                        <small *ngIf="nom.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                    </div>
+                  </div>
+                         </div> 
+                        <div class="form-row">
+                          <div class="form-group col">
+                          <input type="date"  placeholder="تاريخ الولادة " formControlName="datenessance">
+                           
+                  
+                        <div *ngIf="datenessance.touched && datenessance.invalid">
+                          <small *ngIf="datenessance.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                      </div>
+                  </div>
+                            </div>    
+                               
+                                                                  <div class="form-row">
+
+   <div class="form-group col">
+                <input type="text" placeholder=" الحالة الصحية  "formControlName="etatmedical">
+                 
+                
+                <div *ngIf="etatmedical.touched && etatmedical.invalid">
+                <small *ngIf="etatmedical.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                </div>
+                </div>
+                </div>   
+                      <div class="form-row">
+                <div class="form-group col">
+                <input type="text"  placeholder=" إسم الأب " formControlName="Nompere">
+                 
+                
+                <div *ngIf="Nompere.touched && Nompere.invalid">
+                <small *ngIf="Nompere.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                </div>
+                </div>
+                </div>
+                        <div class="form-row">
+                <div class="form-group col">
+                <input type="text" placeholder="إسم الأم " formControlName="Nommere">
+                 
+                
+                <div *ngIf="Nommere.touched && Nommere.invalid">
+                <small *ngIf="Nommere.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                </div>
+                </div>
+                </div>     
+                   <div class="form-row">
+                <div class="form-group col">
+                <input type="text"placeholder="مهنة الأب "  formControlName="profissionpere">
+                 
+                
+                <div *ngIf="profissionpere.touched && profissionpere.invalid">
+                <small *ngIf="profissionpere.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                </div>
+                </div>
+                </div>  
+                      <div class="form-row">
+                <div class="form-group col">
+                <input type="text"  placeholder="مهنة الأم" formControlName="proffisionmere">
+                 
+                
+                <div *ngIf="proffisionmere.touched && proffisionmere.invalid">
+                <small *ngIf="proffisionmere.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                </div>
+                </div>
+                </div> 
+                       <div class="form-row">
+                <div class="form-group col">
+                <input type="text" placeholder=" هاتف الأب "  formControlName="telpere">
+                 
+                
+                <div *ngIf="telpere.touched && telpere.invalid">
+                  <small *ngIf="telpere.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                  <small *ngIf="telpere.errors.maxlength" class="text-danger">رقم الهاتف يجب أن يحتوي على ثمانية أرقام  </small>
+                  <small *ngIf="telpere.errors.minlength" class="text-danger">رقم الهاتف يجب أن يحتوي على ثمانية أرقام  </small>
+                  <small *ngIf="telpere.errors.pattern" class="text-danger"> رقم الهاتف يجب أن يحتوي على ثمانية أرقام </small>
+  
+                </div>
+                </div>
+                </div>    
+                    <div class="form-row">
+                <div class="form-group col">
+                <input type="text" placeholder="هاتف الأم " formControlName="telmere">
+                 
+                
+                <div *ngIf="telmere.touched && telmere.invalid">
+                  <small *ngIf="telmere.errors.required " class="text-danger">*هذا المجال مطلوب*<br></small>
+                  <small *ngIf="telmere.errors.maxlength" class="text-danger"> رقم الهاتف يجب أن يحتوي على ثامنية أرقام </small>
+                  <small *ngIf="telmere.errors.minlength" class="text-danger"> رقم الهاتف يجب أن يحتوي على ثامنية أرقام </small>
+                  <small *ngIf="telmere.errors.pattern" class="text-danger"> رقم الهاتف يجب أن يحتوي على ثمانية أرقام </small>
+                </div>
+                </div>
+                </div>       
+                 <div class="form-row">
+                <div class="form-group col">
+                <input type="text" placeholder="العنوان" formControlName="adresse">
+                
+                <div *ngIf="adresse.touched && adresse.invalid">
+                <small *ngIf="adresse.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                <small *ngIf="adresse.errors.pattern" class="text-danger"> العنوان مطلوب<br></small>
+                <small *ngIf="adresse.errors.minlength" class="text-danger">*هذا المجال مطلوب*</small>
+              </div>
+          </div>
+          </div>     
+          <div class="form-row">
+            <div class="form-group col">
+            <input type="date" placeholder="تاريخ الترسيم" formControlName="dateinscrit">
+            
+            <div *ngIf="dateinscrit.touched && dateinscrit.invalid">
+            <small *ngIf="dateinscrit.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+            <small *ngIf="dateinscrit.errors.pattern" class="text-danger"> العنوان مطلوب<br></small>
+            <small *ngIf="dateinscrit.errors.minlength" class="text-danger">*هذا المجال مطلوب*</small>
+          </div>
+      </div>
+      </div>     
+                         
+          <input type="submit"  value="تحيين" [disabled]="   modifierenfant.invalid">
+        </form>
+        <input type="submit"(click)="mdfclub()" value="تحيين النوادي ">
+        <input type="submit"(click)="mdfclasse()" value="تحيين القسم ">
+        <input type="submit"(click)="mdfRG()" value="تحيين التعريفة ">
+
+
+                    </div>
+                </div>
+            </div>
+           
+          
+          
+          
+            <app-footer></app-footer>
+          
+          
+          </div>
+          </div>
+          

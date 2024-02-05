@@ -1,0 +1,45 @@
+
+<div class="wrapper">
+  <app-sidebarm></app-sidebarm>
+
+
+    <div class="main-panel">
+
+
+        
+    <app-navebarm></app-navebarm>
+
+
+    <div class="content">
+          <div class="container-fluid">
+              <div class="row">
+              
+     
+                <label>
+                  الإسم:
+                  <input type="text" (change)="onNomChanged($event)" />
+                </label>
+                    
+                <br/>
+              
+                <br/>
+                <label>
+                  الدليل:
+                  <input type="file" (change)="onImageChanged($event)" />
+                </label>
+                <br/>
+                <button (click)="ajoutercharge()">إضافة الوثائق </button>
+                           
+                </div>
+              </div>
+          </div>
+  
+  
+  
+      <app-footerm></app-footerm>
+  
+  
+  </div>
+  </div>
+  
+  

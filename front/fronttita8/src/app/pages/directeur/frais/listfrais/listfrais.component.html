@@ -1,0 +1,93 @@
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+   
+      <div class="main-panel">
+   
+      <app-navbar>
+     
+      </app-navbar>
+  
+  
+          <div class="content">
+              
+  
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="card">
+                                  <div class="header">
+                                  </div>
+
+                    <h1 class="liste">قائمة معاليم تعريفات الترسيم</h1>
+
+  
+                    <table id="charges" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>التعريفة حسب المستوى  </th>  
+                                 <th>الثمن</th>
+                                 
+                              
+                                <th>تحين</th>  
+                  
+                      
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let dataItem of fraisinscri" >
+                                <td>{{dataItem.nivfrais}}</td>
+                               <td>{{dataItem.montant}} دينار</td>
+                              
+                       <td>
+                        <i class="material-icons" (click)="editClick(dataItem)">edit</i>
+
+                       </td>
+ 
+                              </tr>
+                        </tbody>
+                    </table>
+  
+                    <h1 class="liste">قائمة معاليم التعريفات الشهرية</h1>
+
+  
+                    <table id="charges" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>التعريغة   </th>  
+                                 <th>الثمن</th>
+                                 
+                              
+                                <th>تحين</th>  
+                  
+                      
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let dataItem of fraismonth" >
+                                <td>{{dataItem.type}}</td>
+                               <td>{{dataItem.montant}} دينار</td>
+                               <td>
+                                <i class="material-icons" (click)="editClick(dataItem)">edit</i>
+        
+                               </td>
+                       
+ 
+                              </tr>
+                        </tbody>
+                    </table>
+  
+                               
+                              </div>
+                          </div>
+       
+                      </div>
+                  </div>
+              </div>
+  
+          <app-footer></app-footer>
+  
+      </div>
+  </div>
+  

@@ -1,0 +1,71 @@
+
+<div class="wrapper">
+    <app-sidebarm></app-sidebarm>
+  
+  
+      <div class="main-panel">
+  
+  
+          
+      <app-navebarm></app-navebarm>
+      <div class="content">
+              
+  
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12" *ngIf="t==false">
+                    <div class="card">
+                        <div class="header">
+                        </div>
+                        <h1 style="text-align: center;">قائمة الأقسام</h1>
+
+          
+
+
+
+
+
+                        <div class="table-wrapper content table-responsive table-full-width">
+                            <table id="classe" class="table table-striped table-bordered nowrap" style="width:100%">
+                                <thead>
+                        <tr>
+                            <th>المستوى</th>
+                            <th>القسـم  </th>  
+                          
+                             
+                      
+                           
+                            
+                           
+
+                           
+                        </tr>
+                        </thead>
+                        <tbody>
+                                        <tr (click)="detail(dataItem)" *ngFor="let dataItem of cc" >
+                                            <td *ngIf="dataItem.niveau==1"> ثلاثة سنوات  </td>
+                                            <td *ngIf="dataItem.niveau==2"> اربعة سنوات  </td>
+                                            <td *ngIf="dataItem.niveau==3"> خمسة سنوات  </td>
+
+                                    <td>  قسم {{dataItem.nom}}</td>
+                                                    
+
+                                        </tr>
+                                        </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-danger"  *ngIf="t"> لم يتم تحديد قسم لك</p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <app-footerm></app-footerm>
+
+</div>
+</div>
+

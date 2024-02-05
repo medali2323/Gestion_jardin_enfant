@@ -1,0 +1,57 @@
+
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+      <div class="main-panel">   
+      <app-navbar></app-navbar>
+      
+          <div class="content">
+                  <div class="container-fluid">
+                      <div class="row">
+                        <h3 style="text-align: center;">  تحيين  النشاط</h3>
+
+                        <form [formGroup]="f" 
+                        (ngSubmit)="mdfannee()">
+                        <div class="form-row">
+                            <div class="form-group col">
+                              إسم النشاط <input   type="text" placeholder="إسم النشاط"  formControlName="nom"><br>
+                            
+                                       
+                                     
+                                    <div *ngIf="nom.touched && nom.invalid">
+                                      <small *ngIf="nom.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                                    
+                                      </div>
+                                 </div>
+                                    </div>
+                                    <div class="form-row">
+                                      <div class="form-group col">
+                                          تاريخ النشاط <input  type="date"    formControlName="dateactivite"><br>
+                                      
+                                                 
+                                               
+                                           
+                                           </div>
+                                              </div>
+                       
+                                              <div class="form-row">
+                                                <div class="form-group col">
+                                                  الثمن <input  type="number" step="0.1"  placeholder="الثمن"  formControlName="prixactivite"><br>
+                                                
+                                                           
+                                                         
+                                                     
+                                                     </div>
+                                                        </div>
+                        
+                                   
+                        <input type="submit"  value=" تحيين  "  [disabled]="   f.invalid"/>
+                        </form>
+                        </div>
+                      </div>
+                  </div>
+              
+          <app-footer></app-footer>
+      </div>
+  </div>
+  
+  

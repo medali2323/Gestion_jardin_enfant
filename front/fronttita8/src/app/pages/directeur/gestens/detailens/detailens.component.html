@@ -1,0 +1,81 @@
+
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+  
+  
+      <div class="main-panel">
+  
+  
+          
+      <app-navbar></app-navbar>
+  
+
+   
+      <div class="content">
+        <div class="noScreen h-100"> 
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                            </div>
+                            <table id="example" class="table" style="width:100% ;
+                            border:1px solid ;">
+                                <tr>
+                                    <th>الإسم و اللقب  </th>  
+                                     
+                                    <th>تاريح الولادة</th>
+                                  
+                                    <th>الجنسية</th>  
+                                   
+                                    <th>رفم بطاقة التعريف الوطنية</th>
+                                    <th>الصادرة  في</th>
+                                    <th> المستوى العلمي</th>
+                          
+                                    <th> الإختصاص</th>
+                                   
+                                   
+                                    <th> تاريخ الإلتحاق بالمزسسة</th>
+                                  <th>الهاتف</th>
+                                    <th>العنوان</th>
+                                   <th>طباعة البطاقة </th>
+                          
+                                   
+                                </tr>
+                                <tr>
+                            <td>{{enf.prenom}} {{enf.nom}}</td>
+                          <td>{{enf.datenessance}}</td>
+                          <td>{{enf.nationalite}}</td>
+
+                  
+                          <td>{{enf.cin}}</td>
+                          <td>{{enf.datecin}}</td>
+                          <td>{{enf.nvscolaire}}</td>
+                          <td>{{enf.specialite}}</td> 
+                          <td>{{enf.dateemb}}</td> 
+                          <td>{{enf.tel}}</td> 
+
+                          <td>{{enf.adresse}}</td>
+                          <td>                          <button (click)="generatePdf()">طباعة البطاقة الشخصية</button>  </td>   
+
+                                </tr>
+                            </table>
+        
+
+                        </div>
+                    </div>
+ 
+                </div>
+            </div>
+        </div>
+
+          
+        </div>
+
+
+    <app-footer></app-footer>
+
+
+</div>
+</div>
+

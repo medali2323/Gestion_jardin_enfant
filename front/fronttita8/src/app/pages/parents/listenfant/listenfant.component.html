@@ -1,0 +1,68 @@
+
+<div class="wrapper">
+    <app-sidebarp></app-sidebarp>
+  
+  
+      <div class="main-panel">
+  
+  
+          
+<app-navbarp></app-navbarp>  
+
+      <div class="content">
+              
+  
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                        </div>
+                    
+
+                        <h1 class="liste"> قائمة الأطفال  </h1>
+
+  
+                        <table id="charges" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>الإسم  </th>  
+                                     <th>اللقب</th>
+                                     <th>المزيد</th>
+                                  
+                                   
+                           
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let dataItem of enfsp" >
+                                    <td>{{dataItem.prenom}}</td>
+                                   <td>{{dataItem.nom}}</td>
+                                  <td>
+                                    <i class="material-icons" (click)="detailenfant(dataItem)">dehaze</i>
+                                  </td>
+                  
+                                  </tr>
+                            </tbody>
+                        </table>
+         
+
+
+                     
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+   
+
+
+
+    <app-footerp></app-footerp>
+
+
+</div>
+</div>
+

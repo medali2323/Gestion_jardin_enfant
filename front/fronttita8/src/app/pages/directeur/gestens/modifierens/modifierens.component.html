@@ -1,0 +1,191 @@
+
+<div class="wrapper">
+  <app-sidebar></app-sidebar>
+
+
+    <div class="main-panel">
+
+
+        
+    <app-navbar></app-navbar>
+
+    <div class="content">
+          
+
+      <div class="container-fluid">
+          <div class="row">
+            <form [formGroup]="updatemaitresse" 
+                          (ngSubmit)="modifier()">
+              <h1>تحيين مدرس </h1>
+              <div class="form-row">
+                <div class="form-group col">
+                          <input type="text" placeholder="الإسم" formControlName="prenom">
+                           
+                         
+                        <div *ngIf="prenom.touched && prenom.invalid">
+                          <small *ngIf="prenom.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                          <small *ngIf="prenom.errors.pattern" class="text-danger"> الإسم مطلوب<br></small>
+                          <small *ngIf="prenom.errors.minlength" class="text-danger">الإسم يجب أن يحتوي على حرفين على الأقل</small>
+                          </div>
+                     </div>
+                        </div>
+                   
+
+                       
+                 <div class="form-row">
+                  <div class="form-group col">
+                  <input type="text"  placeholder="اللقب" formControlName="nom">
+                   
+                 
+                <div *ngIf="nom.touched && nom.invalid">
+                  <small *ngIf="nom.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                  <small *ngIf="nom.errors.pattern" class="text-danger">اللقب مطلوب<br></small>
+                  <small *ngIf="nom.errors.minlength" class="text-danger">اللقب يجب أن يحتوي على حرفين على الأقل</small>
+              </div>
+            </div>
+               
+                   </div>   
+                  <div class="form-row">
+                    <div class="form-group col">
+                    <input type="text" placeholder="رقم بطاقة التعريف الوطنبة" formControlName="cin">
+                     
+                   
+                  <div *ngIf="cin.touched && cin.invalid">
+                    <small *ngIf="cin.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                    <small *ngIf="cin.errors.pattern" class="text-danger"> رقم بطاقة التعريف الوطنبة مطلوب<br></small>
+                    <small *ngIf="cin.errors.minlength" class="text-danger">رقم بطاقة التعريف الوطنبة يجب أن يحتوي على 8 أرقام على الأقل</small>
+                </div>
+            </div>
+                      </div>    
+                           <div class="form-row">
+          <div class="form-group col">
+          <input type="date" placeholder="تاريخها" formControlName="datecin">
+           
+          
+          <div *ngIf="datecin.touched && datecin.invalid">
+          <small *ngIf="datecin.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+          <small *ngIf="datecin.errors.pattern" class="text-danger"> تاريخ مطلوب<br></small>
+          <small *ngIf="datecin.errors.minlength" class="text-danger">*هذا المجال مطلوب*</small>
+          </div>
+          </div>
+          </div>   
+                <div class="form-row">
+          <div class="form-group col">
+          <input type="date" placeholder="تاريخ الولادة" formControlName="datenessance">
+           
+          
+          <div *ngIf="datenessance.touched && datenessance.invalid">
+          <small *ngIf="datenessance.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+          <small *ngIf="datenessance.errors.pattern" class="text-danger">  تاريخ الولادة مطلوب<br></small>
+          <small *ngIf="datenessance.errors.minlength" class="text-danger">*هذا المجال مطلوب*</small>
+          </div>
+          </div>
+          </div>
+                  <div class="form-row">
+          <div class="form-group col">
+          <input type="text" placeholder="مكانها" formControlName="villenessance">
+           
+          
+          <div *ngIf="villenessance.touched && villenessance.invalid">
+          <small *ngIf="villenessance.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+          <small *ngIf="villenessance.errors.pattern" class="text-danger"> المكان مطلوب<br></small>
+          <small *ngIf="villenessance.errors.minlength" class="text-danger">المكان يجب أن يحتوي على حرفين على الأقل</small>
+          </div>
+          </div>
+          </div>     
+             <div class="form-row">
+          <div class="form-group col">
+          <input type="text" placeholder="الجنسية" formControlName="nationalite">
+           
+          
+          <div *ngIf="nationalite.touched && nationalite.invalid">
+          <small *ngIf="nationalite.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+          <small *ngIf="nationalite.errors.pattern" class="text-danger"> الجنسية مطلوب<br></small>
+          <small *ngIf="nationalite.errors.minlength" class="text-danger">الجنسية يجب أن يحتوي على حرفين على الأقل</small>
+          </div>
+          </div>
+          </div>  
+                <div class="form-row">
+          <div class="form-group col">
+          <input type="text" placeholder="المستوى" formControlName="nvscolaire">
+           
+          
+          <div *ngIf="nvscolaire.touched && nvscolaire.invalid">
+          <small *ngIf="nvscolaire.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+          <small *ngIf="nvscolaire.errors.pattern" class="text-danger">المستوى مطلوب<br></small>
+          <small *ngIf="nvscolaire.errors.minlength" class="text-danger">المستوى يجب أن يحتوي على حرفين على الأقل</small>
+          </div>
+          </div>
+          </div> 
+                 <div class="form-row">
+          <div class="form-group col">
+          <input type="text" placeholder="الإختصاص" formControlName="specialite">
+           
+          
+          <div *ngIf="specialite.touched && specialite.invalid">
+          <small *ngIf="specialite.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+          <small *ngIf="specialite.errors.pattern" class="text-danger"> الإختصاص مطلوب<br></small>
+          <small *ngIf="specialite.errors.minlength" class="text-danger">الإختصاص يجب أن يحتوي على حرفين على الأقل</small>
+          </div>
+          </div>
+          </div>    
+              <div class="form-row">
+          <div class="form-group col">
+          <input type="text" placeholder="رقم الهاتف" formControlName="tel">
+           
+          
+          <div *ngIf="tel.touched && tel.invalid">
+          <small *ngIf="tel.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+          <small *ngIf="tel.errors.pattern" class="text-danger"> رقم الهاتف مطلوب<br></small>
+          <small *ngIf="tel.errors.minlength" class="text-danger"> رقم الهاتف يجب أن يحتوي على ثامنية أرقام </small>
+          </div>
+          </div>
+          </div>       
+           <div class="form-row">
+          <div class="form-group col">
+          <input type="text" placeholder="العنوان" formControlName="adresse">
+          
+          <div *ngIf="adresse.touched && adresse.invalid">
+          <small *ngIf="adresse.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+          <small *ngIf="adresse.errors.pattern" class="text-danger"> العنوان مطلوب<br></small>
+          <small *ngIf="adresse.errors.minlength" class="text-danger">*هذا المجال مطلوب*</small>
+          </div>
+          </div>
+          </div>
+            <div class="form-row">
+              <div class="form-group col">
+              <input type="date" placeholder="تاريخها" formControlName="dateemb">
+               
+              
+              <div *ngIf="dateemb.touched && dateemb.invalid">
+              <small *ngIf="dateemb.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+              <small *ngIf="dateemb.errors.pattern" class="text-danger"> تاريخ مطلوب<br></small>
+              <small *ngIf="dateemb.errors.minlength" class="text-danger">*هذا المجال مطلوب*</small>
+              </div>
+              </div>
+              </div>            
+           
+          <div class="form-row">
+            <div class="form-group col">
+            مباشرة العمل<input type="checkbox" placeholder="العنوان" formControlName="actif">
+            
+         
+            </div>
+            </div> 
+          
+                <input type="submit"  value="تحيين"[disabled]="updatemaitresse.invalid">
+            </form>
+          </div>
+      </div>
+  </div>
+ 
+
+
+
+  <app-footer></app-footer>
+
+
+</div>
+</div>
+
+

@@ -1,0 +1,65 @@
+
+.container-fluid input[type="text"],
+.container-fluid input[type="date"],
+.container-fluid input[type="datetime"],
+.container-fluid input[type="email"],
+.container-fluid input[type="number"],
+.container-fluid input[type="search"],
+.container-fluid input[type="time"],
+.container-fluid input[type="url"],
+.container-fluid textarea,
+.container-fluid select 
+{
+	/* -webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	-o-animation: all 0.30s ease-in-out; */
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.container-fluid input[type="text"]:focus,
+.container-fluid input[type="date"]:focus,
+.container-fluid input[type="datetime"]:focus,
+.container-fluid input[type="email"]:focus,
+.container-fluid input[type="number"]:focus,
+.container-fluid input[type="search"]:focus,
+.container-fluid input[type="time"]:focus,
+.container-fluid input[type="url"]:focus,
+.container-fluid textarea:focus,
+.container-fluid select:focus
+{
+	box-shadow: 0 0 5px #43D1AF;
+	padding: 3%;
+	border: 1px solid #43D1AF;
+}
+
+.container-fluid input[type="submit"],
+.container-fluid input[type="button"]{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background: #43D1AF;
+	border-bottom: 2px solid #30C29E;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;	
+	color: #fff;
+}
+.container-fluid input[type="submit"]:hover,
+.container-fluid input[type="button"]:hover{
+	background: #2EBC99;
+}
+ .liste{
+     text-align: center;
+ }

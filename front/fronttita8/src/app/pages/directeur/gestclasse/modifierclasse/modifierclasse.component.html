@@ -1,0 +1,30 @@
+
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+      <div class="main-panel">   
+      <app-navbar></app-navbar>
+          <div class="content">
+                  <div class="container-fluid">
+                    <div class="row">
+                        <h3 style="text-align: center;">  تحيين  القسم</h3>
+
+                        المستوى  <select required #nvs="ngModel" [class.is-invalid]="nvs.touched && nvs.invalid "  [(ngModel)]="nvsText" >
+                            <option *ngFor="let nv of niveau" [value]="nv.id">
+                                {{nv.nom}}
+                            </option>
+
+                        </select>
+                        <small *ngIf="nvs.invalid" class="text-danger">*هذا المجال مطلوب*<br></small>
+
+                   
+
+                       اسم القسم <input  required #nom="ngModel" [class.is-invalid]="nom.touched && nom.invalid "  type="text"   [(ngModel)]="nomText">
+                       <small *ngIf="nom.invalid" class="text-danger">*هذا المجال مطلوب*<br></small>
+
+                       <input type="submit" (click)="ajtclasse()" value="تحيين"  [disabled]=" nom.invalid  ||  nvs.invalid "></div>
+                  </div>
+              </div>
+          <app-footer></app-footer>
+      </div>
+  </div>
+  

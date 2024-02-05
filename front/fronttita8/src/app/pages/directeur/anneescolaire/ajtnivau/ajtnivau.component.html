@@ -1,0 +1,39 @@
+
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+      <div class="main-panel">   
+      <app-navbar></app-navbar>
+      
+          <div class="content">
+                  <div class="container-fluid">
+                      <div class="row">
+                        <form [formGroup]="f" 
+                        (ngSubmit)="ajtannee()">
+                <div class="form-row">
+          <div class="form-group col">
+            المستوى<input   type="text" placeholder="المستوى"  formControlName="libelle"><br>
+          
+                     
+                   
+                  <div *ngIf="libelle.touched && libelle.invalid">
+                    <small *ngIf="libelle.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                  
+                    </div>
+               </div>
+                  </div>
+              
+                       
+                            
+                        
+                                   
+                        <input type="submit"  value="  إضافة مستوى "   [disabled]="   f.invalid"/>
+                        </form>
+                        </div>
+                      </div>
+                  </div>
+              
+          <app-footer></app-footer>
+      </div>
+  </div>
+  
+  

@@ -1,0 +1,33 @@
+
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+      <div class="main-panel">   
+      <app-navbar></app-navbar>
+          <div class="content">
+                  <div class="container-fluid">
+                      <div class="row">
+                        المستوى  <select name="" id="" [(ngModel)]="classe.niveau">
+                            <option *ngFor="let nv of niveau" [value]="nv.id">
+                                {{nv.libelle}}
+                            </option>
+                        </select>
+                        السنة الدراسية
+
+                        <select name="" id="" [(ngModel)]="classe.anneescolaire">
+                            <option *ngFor="let nv of anneescolaire" [value]="nv.id">
+                                {{nv.date_deb}}
+                            </option>
+                        </select>   
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                       اسم القسم <input type="number"   [(ngModel)]="classe.nom">
+               
+                    <input type="submit" (click)="ajtclasse()" value="تسجيل"></div>
+                  </div>
+              </div>
+          <app-footer></app-footer>
+      </div>
+  </div>
+  

@@ -1,0 +1,67 @@
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+   
+      <div class="main-panel">
+   
+      <app-navbar>
+     
+      </app-navbar>
+  
+  
+          <div class="content">
+              
+  
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="card">
+                                  <div class="header">
+                                  </div>
+                                  <h1>قائمة الأقسام</h1>
+  
+                    
+  
+  
+  
+  
+  
+                                  <div class="table-wrapper content table-responsive table-full-width">
+                                      <table id="classe" class="table table-striped table-bordered nowrap" style="width:100%">
+                                          <thead>
+                                  <tr>
+                                      <th>المستوى</th>
+                                      <th>القسـم  </th>  
+                                    
+                                       
+                                
+                                     
+                                      
+                                     
+  
+                                     
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                                  <tr (click)="detail(dataItem)" *ngFor="let dataItem of tab">
+                                                      <td>  {{dataItem.niveau}}</td>
+  
+                                              <td>   {{dataItem.nom}}</td>
+                                                              
+  
+                                                  </tr>
+                                                  </tbody>
+                                  </table>
+                                  </div>
+                              </div>
+                          </div>
+       
+                      </div>
+                  </div>
+              </div>
+  
+          <app-footer></app-footer>
+  
+      </div>
+  </div>
+  
+  

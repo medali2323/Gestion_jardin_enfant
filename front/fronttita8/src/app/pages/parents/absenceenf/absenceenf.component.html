@@ -1,0 +1,69 @@
+
+<div class="wrapper">
+    <app-sidebarp></app-sidebarp>
+  
+  
+      <div class="main-panel">
+  
+  
+          
+<app-navbarp></app-navbarp>  
+
+      <div class="content">
+              
+  
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                        </div>
+                    
+                        <h4 class="liste">الطفل {{enf.fn}}</h4>
+
+                        <h1 class="liste" *ngIf="absenfant.length>0">      قائمة الغيابات  </h1>
+                        <h1 class="liste" *ngIf="absenfant.length==0" style="color: red;">      لا يوجد  غيابات  </h1>
+
+  
+                        <div class="table-wrapper">
+                            <table class="fl-table" *ngIf="absenfant.length>0">                            <thead>
+                                <tr>
+                                    <th>تاريح الغياب  </th>  
+                                     <th> السبب أو ملاحضة</th>
+                                     
+                            
+                                   
+                           
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let dataItem of absenfant" >
+                                    <td>{{dataItem.dateabcence}}</td>
+                                   <td>{{dataItem.cause}}</td>
+                             
+                          
+                  
+                                  </tr>
+                            </tbody>
+                        </table>
+                        </div>
+
+
+                     
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+   
+
+
+
+    <app-footerp></app-footerp>
+
+
+</div>
+</div>
+

@@ -1,0 +1,38 @@
+
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+      <div class="main-panel">   
+      <app-navbar></app-navbar>
+          <div class="content">
+                  <div class="container-fluid">
+                      <div class="row">
+<h3>
+    إضافة طفل إلى قسم
+
+</h3>
+                        الإسم و اللقب {{enfant.prenom}} {{enfant.nom}} <br>
+                  
+                    المستوى  <select name="" id="" [(ngModel)]="niveauselected" (change)="change()">
+                            <option *ngFor="let nv of niveau" [value]="nv.id">
+                                {{nv.nom}}
+                            </option>
+                        </select>
+                        <div class="form-group">
+                            القسم         <select   required #classe="ngModel" [class.is-invalid]="classe.touched && classe.invalid "  [(ngModel)]="classeText"  >
+                                <option *ngFor="let cl of tab"   [value]="cl.id" >
+                                    {{cl.nom}}
+                                </option>
+                            </select>  
+                            <small *ngIf="classe.invalid" class="text-danger">*هذا المجال مطلوب*<br></small>
+      
+                        </div>
+
+                   
+<input type="submit" (click)="affecter()" value="تسجيل" [disabled]=" classe.invalid"  >
+</div>
+                  </div>
+              </div>
+          <app-footer></app-footer>
+      </div>
+  </div>
+  

@@ -1,0 +1,58 @@
+
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+      <div class="main-panel">   
+      <app-navbar></app-navbar>
+      
+          <div class="content">
+                  <div class="container-fluid">
+                      <div class="row">
+                        <h3 style="text-align: center;"> إنشاء نادي
+                        </h3>
+                        <form [formGroup]="f" 
+                        (ngSubmit)="ajtannee()">
+                <div class="form-row">
+          <div class="form-group col">
+            إسم النادي <input   type="text" placeholder="إسم النادي"  formControlName="nom"><br>
+          
+                     
+                   
+                  <div *ngIf="nom.touched && nom.invalid">
+                    <small *ngIf="nom.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                  
+                    </div>
+               </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col">
+                        إجباري <input  type="checkbox"  placeholder="إجباري"  formControlName="obligatoire"><br>
+                    
+                               
+                             
+                         
+                         </div>
+                            </div>
+                       
+                            <div class="form-row">
+                              <div class="form-group col">
+                                الثمن <input  type="number"  placeholder="الثمن"   step="0.1" formControlName="prix"><br>
+                              
+                                         
+                                       
+                                   
+                                   </div>
+                                      </div>
+        
+                        
+                                   
+                        <input type="submit"  value=" إنشاء النادي "   [disabled]="   f.invalid"/>
+                        </form>
+                        </div>
+                      </div>
+                  </div>
+              
+          <app-footer></app-footer>
+      </div>
+  </div>
+  
+  

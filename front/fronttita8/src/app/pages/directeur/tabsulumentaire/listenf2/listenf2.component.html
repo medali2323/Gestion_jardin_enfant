@@ -1,0 +1,82 @@
+<div style="text-align: center;"  >
+    <input matInput type="text" (keyup)="doFilter2($event.target.value)" placeholder="البحث">
+
+                                    </div>
+
+              <table mat-table [dataSource]="dataSource" matSort >  
+                
+                  <ng-container matColumnDef="prenom">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header>  الإسم </th>
+                    <td mat-cell *matCellDef="let element"> {{element.prenom}} </td>
+                  </ng-container>
+                  <ng-container matColumnDef="nom">
+                      <th mat-header-cell *matHeaderCellDef> اللقب </th>
+                      <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="datenessance">
+                      <th mat-header-cell *matHeaderCellDef> تاريح الولادة </th>
+                      <td mat-cell *matCellDef="let element"> {{element.datenessance}} </td>
+                    </ng-container> <ng-container matColumnDef="etatmedical">
+                      <th mat-header-cell *matHeaderCellDef> etatmedical </th>
+                      <td mat-cell *matCellDef="let element"> {{element.etatmedical}} </td>
+                    </ng-container> <ng-container matColumnDef="Nompere">
+                      <th mat-header-cell *matHeaderCellDef> إسم الأب </th>
+                      <td mat-cell *matCellDef="let element"> {{element.Nompere}} </td>
+                    </ng-container> <ng-container matColumnDef="Nommere">
+                      <th mat-header-cell *matHeaderCellDef> إسم  </th>
+                      <td mat-cell *matCellDef="let element"> {{element.Nommere}} </td>
+                    </ng-container> <ng-container matColumnDef="classe">
+                      <th mat-header-cell *matHeaderCellDef> القسم </th>
+                      <td mat-cell *matCellDef="let element"> {{element.classe}} 
+                          <input (click)="afftoclasse(element)" *ngIf="element.a==false" style="hover;background: #2EBC99;    width: 100%;
+                          padding: 3%;
+                          background: #43D1AF;
+                          border-bottom: 2px solid #30C29E;
+                          border-radius:15%;
+                          border-top-style: none;
+                          border-right-style: none;
+                          border-left-style: none;
+                          color: #fff;" type="submit" value="إختيار قسم
+">  
+                      </td>
+                    </ng-container> <ng-container matColumnDef="telpere">
+                      <th mat-header-cell *matHeaderCellDef> هاتف الأب </th>
+                      <td mat-cell *matCellDef="let element"> {{element.telpere}} </td>
+                    </ng-container> <ng-container matColumnDef="telmere">
+                      <th mat-header-cell *matHeaderCellDef> هاتف الأم </th>
+                      <td mat-cell *matCellDef="let element"> {{element.telmere}} </td>
+                    </ng-container> <ng-container matColumnDef="adresse">
+                      <th mat-header-cell *matHeaderCellDef> العنوان </th>
+                      <td mat-cell *matCellDef="let element"> {{element.adresse}} </td>
+                    </ng-container>
+             
+                    <ng-container matColumnDef="dateinscrit">
+                      <th mat-header-cell *matHeaderCellDef> تاريح الترسيم </th>
+                      <td mat-cell *matCellDef="let element"> {{element.dateinscrit}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="details">
+                      <th mat-header-cell *matHeaderCellDef> المزيد</th>
+                      <td mat-cell *matCellDef="let element">
+                        <i class="material-icons" (click)="detailenfant(element)">dehaze</i>   
+
+                      </td>
+                    </ng-container>
+                    <ng-container matColumnDef="update">
+                        <th mat-header-cell *matHeaderCellDef> تحين </th>
+                        <td mat-cell *matCellDef="let element">
+                          <i class="material-icons" (click)="editclick(element)">edit</i>
+
+                        </td>
+                      </ng-container>
+                      <ng-container matColumnDef="supprimer">
+                        <th mat-header-cell *matHeaderCellDef> حذف </th>
+                        <td mat-cell *matCellDef="let element">
+                          <i class="material-icons" (click)="deleteClick(element)">delete</i>   
+
+                        </td>
+                      </ng-container> 
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                <mat-paginator [pageSizeOptions]="[ 5, 10,25,50,100]" showFirstLastButtons></mat-paginator>
+             

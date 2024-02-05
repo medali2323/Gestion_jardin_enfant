@@ -1,0 +1,63 @@
+
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+  
+  
+      <div class="main-panel">
+  
+  
+          
+      <app-navbar></app-navbar>
+  
+      <div class="content">
+            
+  
+        <div class="container-fluid">
+            <div class="row">
+            <h3 style="text-align: center;"> تحيين وصل الخلاص</h3>
+              <form [formGroup]="modifierfais" 
+              (ngSubmit)="modif()">
+      <div class="form-row">
+<div class="form-group col">
+   المبلغ المستلم<input   type="number"  step="0.1" placeholder="المبلغ المستلم"  formControlName="montantreglemaiment"><br>
+
+           
+         
+        <div *ngIf="montantreglemaiment.touched && montantreglemaiment.invalid">
+          <small *ngIf="montantreglemaiment.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+        
+          </div>
+     </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col">
+            تاريخ الدفع<input  type="date"  max="30-06-2022" min="15-09-2021" placeholder=" تاريخ"  formControlName="datereglemaiment"><br>
+          
+                     
+                   
+                  <div *ngIf="datereglemaiment.touched && datereglemaiment.invalid">
+                    <small *ngIf="datereglemaiment.errors.required" class="text-danger">*هذا المجال مطلوب*<br></small>
+                  
+                    </div>
+               </div>
+                  </div>
+             
+                  
+              
+                         
+              <input type="submit"  value="  تحيين "   />
+              </form>
+            </div>
+        </div>
+      </div>
+   
+  
+  
+  
+    <app-footer></app-footer>
+  
+  
+  </div>
+  </div>
+  
+  

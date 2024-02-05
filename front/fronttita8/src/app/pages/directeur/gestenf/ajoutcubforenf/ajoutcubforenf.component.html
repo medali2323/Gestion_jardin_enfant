@@ -1,0 +1,45 @@
+
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+      <div class="main-panel">   
+      <app-navbar></app-navbar>
+          <div class="content">
+                  <div class="container-fluid">
+                      <div class="row">
+                        الإسم و اللقب {{enfant.prenom}} {{enfant.nom}} <br>
+
+                        <table id="classe" class="table table-striped table-bordered nowrap" style="width:100%">
+                            <thead>
+                    <tr>
+                        <th>النادي</th>
+                      <td>إجباري</td>
+                         <td>مسجل</td>
+                    
+                        
+                       
+
+                       
+                    </tr>
+                    </thead>
+                    <tbody>
+                                    <tr *ngFor="let dataItem of CLUB"  >
+                                        <td>  {{dataItem.nom}}</td>
+                                        <td *ngIf="dataItem.obligatoire==true"><input type="checkbox" checked [disabled]="ReadOnlyStyleGuideNotes">   </td>
+                                        <td *ngIf="dataItem.obligatoire==false"><input type="checkbox" [disabled]="ReadOnlyStyleGuideNotes"> </td>
+                                        <td *ngIf="dataItem.aff=='o'"><input type="checkbox" checked [disabled]="ReadOnlyStyleGuideNotes" > <input (click)="suppclub(dataItem)" type="submit" value="الإعفاء"></td>
+                                        <td *ngIf="dataItem.aff!='o'"><input type="checkbox" [disabled]="ReadOnlyStyleGuideNotes"  >  <input (click)="ajoutclub(dataItem)" type="submit" value="التسجيل"></td>
+
+
+                                    </tr>
+                                    </tbody>
+                    </table>
+
+                   
+
+</div>
+                  </div>
+              </div>
+          <app-footer></app-footer>
+      </div>
+  </div>
+  

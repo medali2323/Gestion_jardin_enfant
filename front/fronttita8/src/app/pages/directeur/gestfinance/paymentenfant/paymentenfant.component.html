@@ -1,0 +1,93 @@
+
+<div class="wrapper">
+    <app-sidebarf></app-sidebarf>
+  
+  
+      <div class="main-panel">
+  
+  
+          
+      <app-navbarf></app-navbarf>
+  
+      <div class="content">
+            
+  
+        <div class="container-fluid">
+            <div class="row">
+              <h1 class="liste"> قائمة   الإستخلاصات الشهرية</h1>
+
+              <table id="example"  class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">    
+                            <thead>
+                 <tr>
+                  <th>الشهر</th>
+                  <th>خالص</th>
+
+                  <th>تاريخ الدفع</th>
+                  <th> المبلغ</th>
+
+                 </tr>
+
+
+               </thead>
+               <tr *ngFor="let item of tab"> 
+                 <!--  
+
+                 --> <td > معلوم {{item.mois.m}}</td>   
+
+                  <td *ngIf="item.payer==true" style="color: green;">خالص
+                    <button  class="payy" (click)="mdfreg(item)">  تحين الإستخلاص</button>
+                    <button class="payy" (click)="impp(item)"> إستخراج وصل الخلاص</button>
+                  </td>
+                  <td style="color: red;" *ngIf="item.payer==false" >ليس خالص*
+                    <button class="payyr" (click)="pay(item)" >   القيام بالإستخلاص</button>
+
+                  </td>
+                  <td >{{item.datereglemaiment}}</td>
+                  <td >{{item.montantreglemaiment}}</td>
+
+               </tr>
+             </table> 
+             <h1 class="liste"> قائمة   الإستخلاصات  الأنشطة الإضافية  </h1>
+
+             <table id="example"  class="table table-striped table-bordered dt-responsive nowrap" style="width:100%; border:10px" >    
+                           <thead>
+                <tr>
+                 <th>الشهر</th>
+                 <th>خالص</th>
+                 <th>تاريخ الدفع</th>
+                 <th> المبلغ</th>
+
+                </tr>
+
+
+              </thead>
+              <tr *ngFor="let item of tabb"> 
+                 <td  > معلوم {{item.mois}}</td>
+                
+                 <td style="color: red;" *ngIf="item.payer==false" >ليس خالص*
+                   <button class="payyr" (click)="payact(item)" >   القيام بالإستخلاص</button>
+
+                 </td>
+                 <td *ngIf="item.payer==true" style="color: green;">خالص
+                  <button  class="payy" (click)="mdfreg(item)">  تحين الإستخلاص</button>
+                  <button class="payy" (click)="impp(item)"> إستخراج وصل الخلاص</button>
+                </td>
+                 <td >{{item.datereglemaiment}}</td>
+                 <td >{{item.montantreglemaiment}}</td>
+
+              </tr>
+            </table> 
+            </div>
+        </div>
+      </div>
+   
+  
+  
+  
+    <app-footerf></app-footerf>
+  
+  
+  </div>
+  </div>
+  
+  

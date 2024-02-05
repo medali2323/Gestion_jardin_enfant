@@ -1,0 +1,74 @@
+
+.container-fluid .number {
+	background: #1abc9c;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 4px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 15px 15px 15px 0px;
+}
+
+.container-fluid input[type="submit"],
+.container-fluid input[type="button"],
+.payy
+{
+	position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #1abc9c;
+    font-size: 15px;
+    text-align: center;
+    font-style: normal;
+    width: 60%;
+    border: 1px solid #16a085;
+    border-width: 1px 1px 1px;
+    margin-bottom: 9px;
+    border-radius: 50px 50px 50px 50px;
+}
+.container-fluid input[type="submit"]:hover,
+.container-fluid input[type="button"]:hover
+{
+	background: #109177;
+} 
+.liste{
+    text-align: center;
+}
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    min-width: 500px;
+}
+th.mat-header-cell {
+	text-align :right;
+
+}
+td,th{
+	text-align: right;
+}
+
+
+.payyr
+{
+	position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #bc1f1a;
+    font-size: 15px;
+    text-align: center;
+    font-style: normal;
+    width: 60%;
+    border: 1px solid #bc1f1a;
+    border-width: 1px 1px 1px;
+    margin-bottom: 9px;
+    border-radius: 50px 50px 50px 50px;
+}

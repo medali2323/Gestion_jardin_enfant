@@ -1,0 +1,31 @@
+@media print {
+    .noPrint {
+      display: none;
+    }
+    .noScreen {
+    }
+    th, td {
+      border: 1px solid black !important;
+    }
+    .bg-secondary {
+      background-color: #6c757d !important;
+    }
+  
+    .bg-info {
+      color: #0dcaf0 !important;
+    }
+  
+  
+  }
+  
+  @media screen {
+  
+    .noPrint {
+    }
+    .noScreen {
+      display: none;
+    }
+  }
+  
+
+  

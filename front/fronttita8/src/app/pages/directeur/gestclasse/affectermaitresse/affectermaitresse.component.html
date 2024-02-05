@@ -1,0 +1,32 @@
+
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+      <div class="main-panel">   
+      <app-navbar></app-navbar>
+          <div class="content">
+                  <div class="container-fluid">
+                      <div class="row">
+                
+                        <div class="form-group"> 
+                            <h3 style="text-align: center;"> إختيار مدرس إلى     {{classeeee.nom}}</h3>
+
+                           
+                            المدرسين الشاغرين         <select   required #m="ngModel" [class.is-invalid]="m.touched && m.invalid "  [(ngModel)]="mText"  >
+                                <option *ngFor="let cl of maitress"   [value]="cl.id" >
+                                    {{cl.prenom}}                                     {{cl.nom}} 
+
+                                </option>
+                            </select>  
+                            <small *ngIf="m.invalid" class="text-danger">*هذا المجال مطلوب*<br></small>
+      
+                        </div>
+
+                   
+<input type="submit" (click)="affecter()" value="تسجيل" [disabled]=" m.invalid"  >
+</div>
+                  </div>
+              </div>
+          <app-footer></app-footer>
+      </div>
+  </div>
+  

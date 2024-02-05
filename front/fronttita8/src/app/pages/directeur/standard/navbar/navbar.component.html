@@ -1,0 +1,60 @@
+<nav class="navbar navbar-default navbar-fixed">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                <span class="sr-only"> اعلان تيتة</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img class="titr" src="..\assets\img\tita.jpg"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+           
+
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a (click)="logout()" >
+                        خروج
+                    </a>
+                </li>
+                <li>
+                   <a href="">
+                  الصفحة الرئيسية
+                    </a>
+                </li>
+                <li>
+
+                     <a (click)="mdfannee()" >
+                                تحين السنةالدراسية      
+                </a> 
+                
+                </li>
+              <!--  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            مستندات
+                            <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#"> مستندات الأطفال</a></li>
+                        <li><a href="#"> وثائق المعلمين</a></li>
+                        <li><a href="#"> وثائق المدير</a></li>
+                        <li><a href="#"> وثائق الإدارة</a></li>
+                        <li><a href="#">النوادي</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">نتيجة تقييمات الأطفال</a></li>
+                      </ul>
+                </li>-->
+                
+                <li>
+                    
+                    <a (click)="termlineranneescolaire()" >
+                        انهاء السنة الدراسية  {{an}}
+                    </a>
+                </li>
+             
+             
+            </ul>
+        </div>
+    </div>
+</nav>

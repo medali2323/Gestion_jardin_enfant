@@ -1,0 +1,90 @@
+<div class="wrapper">
+  <app-sidebar></app-sidebar>
+ 
+    <div class="main-panel">
+ 
+    <app-navbar>
+   
+    </app-navbar>
+
+
+        <div class="content">
+            <div class="noScreen h-100"> 
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="header">
+                                </div>
+                                <table id="example" class="table" style="width:100% ;
+                                border:1px solid ;">
+                                    <tr>
+                                        <th>الإسم  </th>  
+                                         <th>اللقب</th>
+                                         
+                                        <th>تاريح الولادة</th>
+                                      
+                                        <th>القسـم</th>  
+                                       
+                                        <th>إسم الأب</th>
+                                        <th>هاتف الأب</th>
+                              
+                                        <th>إسم الأم</th>
+                                        <th>هاتف الأم</th>
+                                       <th>العنوان</th>
+                                       <th>طباعة البطاقة الشخصية</th>
+                              
+                                       
+                                    </tr>
+                                    <tr>
+                                <td>{{enf.prenom}}</td>
+                               <td>{{enf.nom}}</td>
+                              <td>{{enf.datenessance}}</td>
+                              <td>{{c}}</td>
+                      
+                              <td>{{enf.Nompere}}</td>
+                              <td>{{enf.telpere}}</td>
+                              <td>{{enf.Nommere}}</td>
+                              <td>{{enf.telmere}}</td>  
+                              <td>{{enf.adresse}}</td>
+                              <td>                          <button (click)="generatePdf()">طباعة البطاقة الشخصية</button>  </td>   
+
+                                    </tr>
+                                </table>
+                  المسجل بقسم {{c}} <br>
+                  <input type="submit"(click)="mdfclasse()" value="تحين القسم ">
+                  المشارك في النوادي
+                  <table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+                    <thead>
+                     <tr>
+                        <th>النادي  </th>  
+        
+              
+                       
+                    </tr>    
+                    </thead>
+                   <tbody>
+                    <tr *ngFor="let item of l3">
+                        <td>{{item.nom}}</td>
+
+                   </tr>
+                   </tbody>
+
+                </table>
+                <input type="submit"(click)="mdfclub()" value="تحين النوادي ">
+
+                            </div>
+                        </div>
+     
+                    </div>
+                </div>
+            </div>
+
+              
+            </div>
+
+        <app-footer></app-footer>
+
+    </div>
+</div>
+

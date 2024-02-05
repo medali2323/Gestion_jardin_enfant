@@ -1,0 +1,48 @@
+<img style='padding:center;
+      display: block;
+      
+     margin-left: auto;
+     margin-right: auto;
+     width: 25%;
+     border-radius: 15px;
+      ' src="..\assets\img\tita2.png" >
+<h1 style="text-align: center;">
+    وصل خلاص عدد {{reg.id}}
+
+</h1> 
+<div class="h-100" style="text-align: center;">
+
+ توصلت من السيد(ة) :{{enf.Nompere}} <br>
+ولي التلميذ(ة) :{{enf.prenom }} {{enf.nom }} <br>
+مبلغا ماليا قدرة : {{reg.montantreglemaiment}}  دينار<br>
+<p *ngIf="t==false">
+معلوم     :{{reg.moisreglemaiment}} <br> 
+
+</p>
+<p *ngIf="t">
+  معلوم      :{{reg.moisreglemaiment}} <br> 
+
+</p>
+صفاقس في     {{reg.datereglemaiment}} <br>
+إمضاء و ختم  المديرة
+</div>
+
+<!--
+   <h1 class="bg-info"> 
+   توصلت من السيد(ة)  :{{enf.Nompere}} <br>
+ </h1>  
+  خاص بالإدارة
+<hr>
+<h1>
+   وصل خلاص عدد {{reg.id}}
+
+</h1> 
+
+توصلت من السيد(ة) {{enf.Nompere}} <br>
+ولي التلميذ(ة) {{enf.prenom }} {{enf.nom }} <br>
+مبلغا ماليا قدرة  {{reg.montantreglemaiment}}  دينار<br>
+معلوم  شهر  أو نشاط {{reg.moisreglemaiment}} <br> 
+صفاقس في     {{reg.datereglemaiment}} <br>
+إمضاء و ختم  المديرة
+-->
+

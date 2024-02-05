@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+   
+      <div class="main-panel">
+   
+      <app-navbar>
+     
+      </app-navbar>
+  
+  
+          <div class="content">
+              
+  
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="card">
+                                  <div class="header">
+                                  </div>
+  الحساب {{user.username}} <br>
+   التفعيل <input type="checkbox" name="" id="" [(ngModel)]="active"  [ngModelOptions]="{standalone:true}">
+  
+  <input type="submit" value="تحيين" (click)="modifiercomtes()">
+  
+                               
+                              </div>
+                          </div>
+       
+                      </div>
+                  </div>
+              </div>
+  
+          <app-footer></app-footer>
+  
+      </div>
+  </div>
+  
+  

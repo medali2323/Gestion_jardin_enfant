@@ -1,0 +1,44 @@
+
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+  
+  
+      <div class="main-panel">
+  
+  
+          
+      <app-navbar></app-navbar>
+  
+
+     
+      <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+              <div class="form-group">
+                <label>
+                  المصاريف:
+                  <input type="text" (change)="onNomChanged($event)" [(ngModel)]="charge.nom"/>
+                </label>
+            </div>        
+    
+              <div class="form-group">
+                <label for="fichier">Choisir un fichier</label>
+                <input type="file" id="fichier" (change)="envoiFichier($event.target.files)" />
+            </div>
+   
+            
+              <label for=""></label>
+              <br>
+               <input type="submit" value="إضافة المصاريف" (click)="envoiFichierParLeService()">          
+              </div>
+            </div>
+        </div>
+
+
+
+    <app-footer></app-footer>
+
+
+</div>
+</div>
+

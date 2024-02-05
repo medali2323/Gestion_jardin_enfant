@@ -1,0 +1,82 @@
+<div class="wrapper">
+    <app-sidebar></app-sidebar>
+   
+      <div class="main-panel">
+   
+      <app-navbar>
+     
+      </app-navbar>
+  
+  
+          <div class="content">
+              
+  
+                  <div class="container-fluid">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="card">
+                                  <div class="header">
+                                  </div>
+   
+                                  <div class="table-wrapper content table-responsive table-full-width">
+                                    <input type="submit" (click)="showAllTeachers = !showAllTeachers" value=" حسابات المدرسين"   >
+
+                                  <app-comptemaitresse  *ngIf="showAllTeachers"></app-comptemaitresse>
+<!-- 
+          <table id="example" *ngIf="showAllparent" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+                                      <thead>
+                                <tr>
+                                    <th>الطفل الراجع بالنظر   </th>  
+                                    <th>إسم المستخدم </th>
+                                     <th> البريد</th>
+                                     <th>كلمة السر</th>
+                                    <th> المباشرة</th>
+                                  
+                                   
+                                    
+                                    <th>تحين</th>
+
+
+                                  
+                                   
+
+                                   
+                                </tr>
+                                </thead>
+                                <tbody>
+                                                <tr *ngFor="let dataItem of parents ">
+                                                    <td> {{dataItem.prenom }} {{dataItem.nom }} </td>
+
+                                                    <td>{{dataItem.username}}</td>
+                                                    <td>{{dataItem.email}}</td>
+                                                       <td>{{dataItem.password2}}</td>
+
+                                                  <td *ngIf="dataItem.is_active">  مفعل </td>
+                                                  <td *ngIf="dataItem.is_active==false" > غير مفعل</td>
+                                                  <td>
+                                                    <i class="material-icons" (click)="detailcompte(dataItem)">edit</i>
+
+                                                  </td>
+
+                                                 
+                                                </tr>
+                                                </tbody>
+                                </table>
+-->
+<input type="submit" (click)="showAllparent = !showAllparent" value=" حسابات الأولياء"   >
+
+                             <app-compteparents  *ngIf="showAllparent"></app-compteparents>  
+                                  </div>
+                              </div>
+                          </div>
+       
+                      </div>
+                  </div>
+              </div>
+  
+          <app-footer></app-footer>
+  
+      </div>
+  </div>
+  
+  

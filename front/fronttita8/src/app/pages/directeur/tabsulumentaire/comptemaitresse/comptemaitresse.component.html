@@ -1,0 +1,59 @@
+<h1 class="liste" >  قائمة  حسابات  المدرسين المباشرين</h1>
+
+<div style="text-align: center;" >
+    <input matInput type="text" (keyup)="doFilter($event.target.value)" placeholder="البحث">
+
+                                    </div>
+
+              <table mat-table [dataSource]="dataSource" matSort>  
+                
+       
+                  <ng-container matColumnDef="nomenf">
+                      <th mat-header-cell *matHeaderCellDef>   المدرس(ة) </th>
+                      <td mat-cell *matCellDef="let element"> {{element.nomenf}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="username2">
+                      <th mat-header-cell *matHeaderCellDef>  إسم المستخدم </th>
+                      <td mat-cell *matCellDef="let element"> {{element.username2}} </td>
+                    </ng-container> <ng-container matColumnDef="email2">
+                      <th mat-header-cell *matHeaderCellDef> البريد  </th>
+                      <td mat-cell *matCellDef="let element"> {{element.email2}} 
+                       
+
+                      </td>
+                      
+                    </ng-container> 
+                    <ng-container matColumnDef="password2">
+                        <th mat-header-cell *matHeaderCellDef>  كلمة السر </th>
+                        <td mat-cell *matCellDef="let element"> {{element.password2}} 
+                         
+  
+                        </td>
+                        
+                      </ng-container> <ng-container matColumnDef="actif">
+                        <th mat-header-cell *matHeaderCellDef>  التفعيل </th>
+                        <td mat-cell *matCellDef="let element"> {{element.actif}} 
+                         
+  
+                        </td>
+                        
+                      </ng-container> 
+       
+                    <ng-container matColumnDef="update">
+                        <th mat-header-cell *matHeaderCellDef> تحين </th>
+                        <td mat-cell *matCellDef="let element">
+                
+                                             <i class="material-icons" (click)="modifieractuvite(element)">edit</i>
+
+                      </td>
+                    </ng-container> 
+
+                  
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+                <mat-paginator [length]="5"
+                [pageSize]="10"
+                [pageSizeOptions]="[5,10,25,100]"
+                >
+ </mat-paginator>
